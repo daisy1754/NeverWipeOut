@@ -1,4 +1,4 @@
-package jp.gr.java_conf.daisy;
+package jp.gr.java_conf.daisy.util;
 
 import android.graphics.Point;
 

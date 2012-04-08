@@ -5,6 +5,7 @@ import java.util.List;
 import jp.gr.java_conf.daisy.stage.Ball;
 import jp.gr.java_conf.daisy.stage.Slope;
 import jp.gr.java_conf.daisy.stage.Stage;
+import jp.gr.java_conf.daisy.util.Geometric;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
