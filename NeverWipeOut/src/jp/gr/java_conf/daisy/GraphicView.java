@@ -5,7 +5,6 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-import android.widget.Toast;
 
 public class GraphicView extends SurfaceView implements SurfaceHolder.Callback {
 	GraphicThread thread;
@@ -17,10 +16,10 @@ public class GraphicView extends SurfaceView implements SurfaceHolder.Callback {
 	}
 
 	 @Override
-     public boolean onTouchEvent(MotionEvent event) {
-         thread.onTouchEvent(event);
-         return true;
-     }
+	 public boolean onTouchEvent(MotionEvent event) {
+		 thread.onTouchEvent(event);
+		 return true;
+	 }
 	
 	@Override
 	public void surfaceChanged(
@@ -38,13 +37,13 @@ public class GraphicView extends SurfaceView implements SurfaceHolder.Callback {
 	@Override
 	public void surfaceDestroyed(SurfaceHolder surfaceHolder) {
 		boolean retry = true;
-        thread.setSurfaceReady(false);
-        while (retry) {
-            try {
-                thread.join();
-                retry = false;
-            } catch (InterruptedException e) {
-            }
-        }
+		thread.setSurfaceReady(false);
+		while (retry) {
+			try {
+				thread.join();
+				retry = false;
+			} catch (InterruptedException e) {
+			}
+		}
 	}
 }

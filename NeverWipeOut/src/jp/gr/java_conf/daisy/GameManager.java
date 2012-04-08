@@ -8,9 +8,7 @@ import jp.gr.java_conf.daisy.stage.Stage;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Path;
 import android.graphics.Point;
-import android.util.Log;
 
 public class GameManager {
 	private long lastTime;
@@ -44,7 +42,6 @@ public class GameManager {
 		long timeForMove = System.currentTimeMillis() - lastTime;
 		lastTime += timeForMove;
 		
-		Point currentPosition = new Point(ball.getX(), ball.getY());
 		double deviceTilt = NeverWipeOutActivity.getdeviceTilt() * Math.PI / 180.0;
 		
 		if (!ball.onSlope()) {

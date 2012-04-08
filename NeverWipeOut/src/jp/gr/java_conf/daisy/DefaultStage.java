@@ -3,8 +3,6 @@ package jp.gr.java_conf.daisy;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.graphics.Point;
-
 import jp.gr.java_conf.daisy.stage.Slope;
 import jp.gr.java_conf.daisy.stage.Stage;
 
